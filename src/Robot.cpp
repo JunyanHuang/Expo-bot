@@ -6,14 +6,15 @@
 #include <LiveWindow/LiveWindow.h>
 #include <SmartDashboard/SendableChooser.h>
 #include <SmartDashboard/SmartDashboard.h>
-
-#include "Commands/ExampleCommand.h"
+#include "Commands/drive.h"
+#include <WPILib.h>
 #include "CommandBase.h"
 
 class Robot: public frc::IterativeRobot {
 public:
 	void RobotInit() override {
-		chooser.AddDefault("Default Auto", new ExampleCommand());
+		CommandBase::initialize();
+		chooser.AddDefault("Drive", new drive());
 		// chooser.AddObject("My Auto", new MyAutoCommand());
 		frc::SmartDashboard::PutData("Auto Modes", &chooser);
 	}

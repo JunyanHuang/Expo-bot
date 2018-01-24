@@ -1,17 +1,16 @@
 #include "OI.h"
-
 #include <WPILib.h>
 
 OI::OI()
-:leftJoystick(new Joystick(LEFT_JOY_PORT)), rightJoystick(new Joystick(RIGHT_JOY_PORT))
+:leftJoystick(new Joystick(0)), rightJoystick(new Joystick(1))
 {
 	// Process operator interface input here.
 }
 
 OI::~OI()
 {
-	delete rightJoystick;
 	delete leftJoystick;
+	delete rightJoystick;
 }
 
 Joystick * OI::getLeftJoystick()
