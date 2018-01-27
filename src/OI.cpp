@@ -13,6 +13,8 @@ OI::~OI()
 	delete rightJoystick;
 	delete ShooterButton;
 	delete winchJoystick;
+	delete StartIntake;
+	delete StopIntake;
 }
 
 Joystick * OI::getLeftJoystick()
@@ -28,4 +30,12 @@ Joystick * OI::getWinchJoystick()
 {
 	return winchJoystick;
 
+}
+Button * OI::getStartIntake()
+{
+	return StartIntake;
+}
+Button * OI::getStopIntake()
+{
+	return StopIntake;
 }

@@ -10,13 +10,16 @@ public:
 	Joystick * getRightJoystick();
 	Joystick * getLeftJoystick();
 	Joystick * getWinchJoystick();
-
+	Button * getStartIntake();
+	Button * getStopIntake();
 
 private:
 	Joystick * leftJoystick;
 	Joystick * rightJoystick;
 	Joystick * winchJoystick;
 	Button * ShooterButton;
+	Button * StartIntake;
+	Button * StopIntake;
 	const int LEFT_JOY_PORT = 0;
 	const int RIGHT_JOY_PORT = 0;
 };

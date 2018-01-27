@@ -1,7 +1,9 @@
 #ifndef MoveWinch_H
 #define MoveWinch_H
-
 #include "../CommandBase.h"
+#include <WPILib.h>
+#include "Subsystems/Winch.h"
+#include "OI.h"
 
 class MoveWinch : public CommandBase {
 public:
