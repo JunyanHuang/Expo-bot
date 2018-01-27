@@ -3,9 +3,10 @@
 
 #include <memory>
 #include <string>
-
+#include "Subsystems/Winch.h"
 #include <Commands/Command.h>
 #include "Subsystems/DriveTrainSubsystem.h"
+#include "Subsystems/Shooter.h"
 #include "OI.h"
 
 /**
@@ -23,6 +24,9 @@ public:
 	// Create a single static instance of all of your subsystems
 	static DriveTrainSubsystem* Drive;
 	static std::unique_ptr<OI> oi;
+	static Winch * winchDrive;
+	static Shooter * ballShooter;
+
 };
 
 #endif  // COMMAND_BASE_H
