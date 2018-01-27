@@ -2,7 +2,7 @@
 #include <WPILib.h>
 
 OI::OI()
-:leftJoystick(new Joystick(0)), rightJoystick(new Joystick(1))
+:leftJoystick(new Joystick(0)), rightJoystick(new Joystick(1)), winchJoystick(new Joystick (5))
 {
 	ShooterButton = new JoystickButton(rightJoystick, 1);// Process operator interface input here.
 }
@@ -12,6 +12,7 @@ OI::~OI()
 	delete leftJoystick;
 	delete rightJoystick;
 	delete ShooterButton;
+	delete winchJoystick;
 }
 
 Joystick * OI::getLeftJoystick()
@@ -22,4 +23,9 @@ Joystick * OI::getLeftJoystick()
 Joystick * OI::getRightJoystick()
 {
 	return rightJoystick;
+}
+Joystick * OI::getWinchJoystick()
+{
+	return winchJoystick;
+
 }
