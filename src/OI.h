@@ -9,10 +9,13 @@ public:
 	Joystick * getRightJoystick();
 	Joystick * getLeftJoystick();
 
+
 private:
 	Joystick * leftJoystick;
 	Joystick * rightJoystick;
-
+	Button * ShooterButton;
+	const int LEFT_JOY_PORT = 0;
+	const int RIGHT_JOY_PORT = 0;
 };
 
 #endif  // OI_H
